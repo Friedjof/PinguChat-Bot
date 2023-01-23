@@ -1,0 +1,69 @@
+version: 0.0.1
+
+commands:
+  hi:
+    triggers: ['hello', 'hi', 'hey', 'bonjour', 'servus', "what's up", "hallo"]
+    response: "Hi, I'm the PinguChat-Bot! :robot_face:\n('!help' for more information)"
+  bye:
+    triggers: ['bye', 'goodbye', '!bye', '!goodbye']
+    response: "Bye, see you later!"
+  test:
+    triggers: ['test']
+    response: "Test successful! Hi, I'm the PinguChat-Bot! ('!help' for more information)"
+  help:
+    triggers: ['!help', "help"]
+    response: "Hi, I'm a chatbot!\nI can do the following things:\n- !dm: I will send you a DM\n- !joke: I will answer with a joke\n- !cn or !chucknorris\n- !mensa: Meals in Garching\n- !shutdown: Shutdown the server\n- !ping: Ping the server"
+  ping:
+    triggers: ['!ping', 'ping']
+    response: "Pong!"
+  shutdown:
+    triggers: ['!shutdown', '!reboot', '!restart', '!poweroff', '!halt', '!stop', '!exit', '!quit', '!kill', '!die', '!end']
+    response: "\nNooooo! :cry:\nI'm shutting down now..."
+  penguin:
+    triggers: ['pingu', 'penguin', 'penguins', 'pinguin', 'pinguins', 'day', 'days', 'tag', 'tage']
+    response: "happy penguin awareness day! Hi, I'm the PinguChat-Bot! ('!help' for more information)"
+  giveaway:
+    triggers: ["giveaway", "!giveaway"]
+    response: "Hi, I'm the PinguChat-Bot and not a giveaway bot! ('!help' for more information)"
+  lol:
+    triggers: ["lol", "xd", "!sex", "sex", "lmao"]
+    response: "Very funny! :joy:"
+  sing:
+    triggers: ["!sing", "!song", "!musik", "!music"]
+    response: "Lalaalaalalla! https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  dm:
+    triggers: ["privat", "private", "nachricht", "message"]
+    response: "Hi, I can send you a DM! let me know with '!dm'!"
+  noot:
+    triggers: ["noot", "nooot"]
+    response: "noot noot! :penguin: (!help for more information)"
+  pum:
+    triggers: ["pum", "!pum"]
+    response: "PUM, the excellent Penguin University of Munich! :penguin: (!help for more information)"
+
+exec:
+  joke: ['!joke', '!jokes', '!witz', '!witze']
+  reload: ['!reload']
+  mensa: ['!mensa', 'mensa']
+  chucknorris: ['!chucknorris', 'chucknorris', 'chuck', 'norris', 'chuck norris', 'cn', '!cn']
+  dm: ['!dm', 'dm']
+  reconnect: ['!reconnect', 'reconnect', '!rc']
+
+text:
+  start: "Hi, I'm a PinguChat-Bot! (!help for more information)\nI'm in development, but here is a new Version!!\nYou can test me by sending me a message (like '!mensa')."
+  news: "Whats new? This: '!dm', 'noot'!"
+  reload_success: "Successfully reloaded!"
+  reload_fail: "You don't have the permission to reload the bot!"
+  dm: "Hi, I'm a PinguChat-Bot from the #general channel! switch to the #general channel to talk to me!"
+  dm_success: "I have sent you a message in 'PinguChat' on the left! :mailbox_with_mail:"
+  dm_fail: "Sorry, but I have failed to send you a message! :mailbox_with_no_mail:"
+  reconnect_success: "Successfully reconnected!"
+  mensa_fail: "Sorry, but on the weekend there is no mensa! (opening hours: Mo-Fr 11:00-14:00)"
+
+config:
+  server:
+    host: "http://example.com"
+    port: 1337
+  logs: "logs/logs.log"
+  joke_url: "https://jokeapi.dev/joke/any"
+  chucknorris_url: "https://api.chucknorris.io/jokes/random"

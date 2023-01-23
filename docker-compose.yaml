@@ -1,0 +1,8 @@
+version: '3.0'
+services:
+  app:
+    build: .
+    container_name: PinguChat
+    volumes:
+      - ./logs:/app/logs
+    command: python3 main.py
